@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Kfriars\DiffGraph\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class DiffGraphCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'diff-graph';
 
     public $description = 'My command';
 
