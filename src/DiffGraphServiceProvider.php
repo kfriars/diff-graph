@@ -2,9 +2,9 @@
 
 namespace Kfriars\DiffGraph;
 
+use Kfriars\DiffGraph\Commands\DiffGraphCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Kfriars\DiffGraph\Commands\DiffGraphCommand;
 
 class DiffGraphServiceProvider extends PackageServiceProvider
 {
