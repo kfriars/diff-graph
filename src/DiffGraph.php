@@ -27,13 +27,17 @@ class DiffGraph
     const B = ' ';
 
     protected array $graph = [];
+
     protected array $from;
+
     protected array $to;
+
     protected int $width;
+
     protected int $height;
 
     /**
-     * @param array<int, array<int, string>> $graph
+     * @param  array<int, array<int, string>>  $graph
      */
     public function __construct(
         string $from,
@@ -58,7 +62,7 @@ class DiffGraph
             }
 
             $line .= '|';
-            
+
             $this->graph[] = mb_str_split($line);
         }
 
@@ -82,8 +86,8 @@ class DiffGraph
             $lines[$lineNum] = ' '.$lines[$lineNum].'-'.$i;
             $lines[$lineNum + 1] = $char.$lines[$lineNum + 1].'  ';
         }
-        
-        $lines[$lineNum + 2] = ' '.$lines[$lineNum + 2].'-'.($i+1);
+
+        $lines[$lineNum + 2] = ' '.$lines[$lineNum + 2].'-'.($i + 1);
 
         // Add the top Axis Information
         array_unshift($lines, '  '.implode(' ', $this->from).' ');
