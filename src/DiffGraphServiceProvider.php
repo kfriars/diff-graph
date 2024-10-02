@@ -17,9 +17,6 @@ class DiffGraphServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('diff-graph')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_diff_graph_table')
             ->hasCommand(DiffGraphCommand::class);
     }
 }

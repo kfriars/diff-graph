@@ -3,6 +3,7 @@
 namespace Kfriars\DiffGraph\Commands;
 
 use Illuminate\Console\Command;
+use Kfriars\DiffGraph\DiffGraph;
 
 class DiffGraphCommand extends Command
 {
@@ -12,7 +13,9 @@ class DiffGraphCommand extends Command
 
     public function handle(): int
     {
-        $this->comment('All done');
+        $grapher = new DiffGraph('ABCABBA', 'CBABAC', $this->output);
+
+        $grapher->render();
 
         return self::SUCCESS;
     }
